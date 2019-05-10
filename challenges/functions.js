@@ -35,6 +35,13 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
+// I coined this phenomena "function hopping", essentially what is happening is that we're calling myFunction
+// that is returning a nestedFunction and nestedFunction is allowed to access myFunction's content because of how closure works
+// It hops from myFunction into nestedFunction completely skipping myFunction being called. 
+// So it essentially hops from one function to another skipping the code of the function it was first called upon 
+//whlist executing the function being returned which can acess the parent's block.
+//
+// PS: It's an interesting phenomena and in case "function hopping" becomes the official description, I'm totally taking credit for that.
 
 
 const external = "I'm outside the function";
